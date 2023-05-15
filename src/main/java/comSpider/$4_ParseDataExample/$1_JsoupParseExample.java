@@ -67,7 +67,7 @@ public class $1_JsoupParseExample {
             CloseableHttpResponse pic_res = httpget.execute(Pic_get);
             // 获取html页面源码
             String pic_html = EntityUtils.toString(pic_res.getEntity(), "gbk");
-//            System.out.println(pic_html);
+            // System.out.println(pic_html);
             // 创建Document对象
             Document pic_document = Jsoup.parse(pic_html);
             String pic_src = "https://pic.netbian.com" + pic_document.select("#img > img").get(0).attr("src");
@@ -76,8 +76,8 @@ public class $1_JsoupParseExample {
             // 创建图片资源请求对象
             HttpGet img = new HttpGet(pic_src);
             CloseableHttpResponse img_src = httpget.execute(img);
-//            String img_html = EntityUtils.toString(img_src.getEntity(), "utf-8");
-//            System.out.println(img_html);
+            // String img_html = EntityUtils.toString(img_src.getEntity(), "utf-8");
+            // System.out.println(img_html);
             // 创建字节输出流文件对象
             OutputStream os = new FileOutputStream("./4K彼岸网美图/" + picName + ".jpg", true);
             // 写入数据

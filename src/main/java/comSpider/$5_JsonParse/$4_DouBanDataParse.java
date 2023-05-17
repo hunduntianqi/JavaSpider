@@ -37,7 +37,7 @@ public class $4_DouBanDataParse {
             // 创建 URIBuilder 对象
             URIBuilder uriBuilder = new URIBuilder("https://movie.douban.com/j/chart/top_list?interval_id=100%3A90");
             // 添加请求参数
-            uriBuilder.setParameter("type", "6");
+            uriBuilder.setParameter("type", "11");
             // uriBuilder.setParameter("interval_id", "100%3A90");
             uriBuilder.setParameter("action", "11");
             uriBuilder.setParameter("start", Integer.toString((page - 1) * 20));

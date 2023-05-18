@@ -75,7 +75,7 @@ public class $1_SeleniumSummarize {
         // 创建WebDriver对象
         WebDriver webDriver = new ChromeDriver(options);
         // 打开网页
-        webDriver.get("https://gpms.luxshare-ict.com/zh-CN/SystemManage/Login");
+        webDriver.get("xxx");
         // Xpath定位元素, 选择企业内部用户
         webDriver.findElement(By.xpath("/html/body/form/div[2]/div[1]/div/div[1]/a[2]")).click();
         // 定位元素, 输入用户名和密码

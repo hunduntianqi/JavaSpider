@@ -15,8 +15,13 @@ package comSpider.$6_JavaSelenium;
                 <artifactId>selenium-chrome-driver</artifactId>
                 <version>3.14.0</version>
             </dependency>
+            <dependency>
+                <groupId>org.seleniumhq.selenium</groupId>
+                <artifactId>selenium-support</artifactId>
+                <version>3.141.59</version>
+            </dependency>
         创建参数设置对象 ==>  ChromeOptions options = new ChromeOptions();
-        添加启动参数 ==> options.addArguments("启动参数");
+        添加启动参数 ==> options.addArguments("启动参数1", "启动参数2"...);
             常见启动参数:
                 --user-agent="" ==> 设置请求头的User-Agent
                 --window-size=1366,768 ==> 设置浏览器分辨率（窗口大小）
@@ -60,10 +65,12 @@ package comSpider.$6_JavaSelenium;
             webDriver.findElement(By.xx()).isDisplayed() ==> 判断定位标签是否可见
  */
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+
 
 public class $1_SeleniumSummarize {
     public static void main(String[] args) throws Exception {
@@ -75,7 +82,7 @@ public class $1_SeleniumSummarize {
         // 创建WebDriver对象
         WebDriver webDriver = new ChromeDriver(options);
         // 打开网页
-        webDriver.get("xxx");
+        webDriver.get("https://gpms.luxshare-ict.com/zh-CN/SystemManage/Login");
         // Xpath定位元素, 选择企业内部用户
         webDriver.findElement(By.xpath("/html/body/form/div[2]/div[1]/div/div[1]/a[2]")).click();
         // 定位元素, 输入用户名和密码

@@ -10,7 +10,6 @@ package comSpider.$6_JavaSelenium;
                 <artifactId>selenium-api</artifactId>
                 <version>3.141.59</version>
             </dependency>
-
             <dependency>
                 <groupId>org.seleniumhq.selenium</groupId>
                 <artifactId>selenium-chrome-driver</artifactId>
@@ -30,6 +29,7 @@ package comSpider.$6_JavaSelenium;
         创建WebDriver对象 ==> WebDriver webDriver = new ChromeDriver(options);
         打开网页 ==> webDriver.get(String url);
         关闭浏览器 ==> webDriver.quit()
+        关闭当前窗口 ==> webDriver.close()
         定位元素:
             webDriver.findElement(By.xx()) ==> 定位单个元素
             webDriver.findElements(By.xx()) ==> 定位多个元素
@@ -41,6 +41,8 @@ package comSpider.$6_JavaSelenium;
                 webDriver.findElement(By.partialLinkText()) ==> 通过 a 标签的文本内容的一部分定位元素
                 webDriver.findElement(By.xpath()) ==> 通过xpath表达式定位元素
                 webDriver.findElement(By.cssSelector()) ==> 通过css选择器定位元素
+        获取当前网页标题 ==> webDriver.getTitle()
+        获取当前网页url ==> webDriver.getCurrentUrl()
         控制浏览器:
             设置浏览器窗口最大化 ==>  webDriver.manage().window().maximize();
             设置浏览器窗口尺寸 ==> webDriver.manage().window().setSize(Dimension targetSize)
